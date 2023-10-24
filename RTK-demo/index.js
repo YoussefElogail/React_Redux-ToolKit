@@ -7,8 +7,8 @@ const store = require("./app/store");
 console.log("initialState", store.getState());
 
 const unSubscribe = store.subscribe(() =>
-  // console.log("updated state", store.getState())
-  {}
+  console.log("updated state", store.getState())
+
 );
 store.dispatch(cakeActions.ordered())
 store.dispatch(cakeActions.ordered())
