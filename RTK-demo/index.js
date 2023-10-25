@@ -3,6 +3,7 @@ const icecreamActions =
   require("./features/iceCream/iceCreamSlice").iceCreamActions;
 
 const store = require("./app/store");
+const fetchUsers  = require("./features/user/userSlice").fetchUsers
 
 console.log("initialState", store.getState());
 
@@ -10,17 +11,17 @@ const unSubscribe = store.subscribe(() =>
   console.log("updated state", store.getState())
 
 );
-store.dispatch(cakeActions.ordered())
-store.dispatch(cakeActions.ordered())
-store.dispatch(cakeActions.ordered())
-store.dispatch(cakeActions.reStocked())
+// store.dispatch(cakeActions.ordered())
+// store.dispatch(cakeActions.ordered())
+// store.dispatch(cakeActions.ordered())
+// store.dispatch(cakeActions.reStocked())
 
-store.dispatch(icecreamActions.ordered())
-store.dispatch(icecreamActions.ordered())
-store.dispatch(icecreamActions.ordered())
-store.dispatch(icecreamActions.reStocked(5))
+// store.dispatch(icecreamActions.ordered())
+// store.dispatch(icecreamActions.ordered())
+// store.dispatch(icecreamActions.ordered())
+// store.dispatch(icecreamActions.reStocked(5))
+
+store.dispatch(fetchUsers())
 
 
-
-
-unSubscribe()
+// unSubscribe()
