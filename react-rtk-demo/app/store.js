@@ -10,7 +10,7 @@ const store = configureStore({
   reducer : {
     cake : cakeReducer,
     icecream : icecreamReducer,
-    users : usersReducer
+    user : usersReducer
   },
   // middleware: (getDefaultMiddleware)=> getDefaultMiddleware().concat(logger)
 })
